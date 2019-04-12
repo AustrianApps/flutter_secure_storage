@@ -41,8 +41,7 @@ static NSString *const InvalidParameters = @"Invalid parameter's type";
         NSString *value = [self read:key];
         
         result(value);
-    } else
-    if ([@"write" isEqualToString:call.method]) {
+    } else if ([@"write" isEqualToString:call.method]) {
         NSString *key = arguments[@"key"];
         NSString *value = arguments[@"value"];
         if (![value isKindOfClass:[NSString class]]){
